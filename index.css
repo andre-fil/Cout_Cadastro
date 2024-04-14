@@ -1,0 +1,66 @@
+/* Color Theme Swatches in Hex 
+.Water-&-Rust-1-hex { color: #151F30; }
+.Water-&-Rust-2-hex { color: #103778; }
+.Water-&-Rust-3-hex { color: #0593A2; }
+.Water-&-Rust-4-hex { color: #FF7A48; }
+.Water-&-Rust-5-hex { color: #E3371E; }
+*/
+:root {
+    --cor-primaria: #004101;
+    --cor-secundaria: #FFBA58;
+    --cor-terciaria: #FFFCFF;
+  }
+  
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  var(--cor-terciaria) !important;
+     min-height: 100vh; 
+}
+
+header{
+    background-color: var(--cor-primaria) !important;
+}
+
+.container.text-center{
+
+    color: var(--cor-terciaria) !important;
+   
+}
+
+.cadastro{
+    display: flex;
+    padding: 10%;
+   
+
+}
+
+.form{
+    width: 50%;
+    background-color: #FFBA58;
+    margin:5% auto;
+    padding:2% 5%;
+}
+
+.title_form{
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.field{
+    display: flex;
+    gap:5px;
+    color: azure;
+}
+
+.msg_inclusao{
+    color: rgb(244, 244, 244);
+    text-align: center;
+}
+
+.radios{
+    padding-top: 2%;
+}
