@@ -64,3 +64,10 @@ header{
 .radios{
     padding-top: 2%;
 }
+
+.resultado_pesquisa{
+    margin: auto;
+    width: 30%;
+    background-color: var(--cor-primaria);
+    color: #FFFCFF;
+}

@@ -13,4 +13,14 @@ function obterDados() {
     return array($nome, $email, $senha,$cpf,$status);
     }
 }
+
+
+
+function obterPesquisaDados(){
+    if (isset($_POST["pesquisar"])){
+        $nome = $_POST['nome'];
+    
+        return $nome;
+}
+}
 ?>

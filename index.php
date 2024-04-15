@@ -57,7 +57,7 @@
       <input type="text" class="form-control" id="cpf" name="cpf" required>
     </div>
   <fieldset class="row mb-3 radios">
-    <legend class="col-form-label col-sm-2 pt-0">Status</legend>
+    <legend class="col-form-label col-sm-2 pt-0">Status:</legend>
     <div class="col-sm-10">
       <div class="form-check">
         <input class="form-check-input" type="radio" name="status" id="status1" value="status1" checked>
