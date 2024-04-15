@@ -1,15 +1,13 @@
 <?php
 namespace Coutinho;
+#Importando arquivos necessários
 require_once 'conexao.php';
 require_once 'Pessoa.php'; 
-
-
 require_once 'read2.php'; 
 
 use Coutinho\Pessoa;
+$pessoas =  [];
 
-// Obtenha todos os registros da tabela Pessoa
-$pessoas = buscarTodos($pdo);
 
 ?>
 <?php session_start(); ?>
@@ -49,41 +47,57 @@ $pessoas = buscarTodos($pdo);
   <div class="row mb-3">
     <label for="nome" class="col-sm-2 col-form-label" >Nome: </label>
     <div class="col-sm-10">
-      <input type="name" class="form-control" id="nome" name="nome" required >
+      <input type="name" class="form-control" id="nome" name="nome" placeholder="Digite um nome, caso deseje consultar por um nome" >
     </div>
   </div>
   
   
-  <button type="submit"  name="pesquisar" value="Enviar" class="btn btn-primary">Pesquisar cliente</button>
+  <button type="submit"  name="buscar_por_nome" value="Enviar" class="btn btn-primary">Pesquisar por nome</button>
+  <button type="submit"  name="buscar_todos" value="Enviar" class="btn btn-primary">Exibir todos os clientes</button>
+
+ 
 </form>
-    <?php include "envio.php";?>
+   
     
     </div>
+    
     <div class="resultado_pesquisa">
     <h1>Lista de Pessoas</h1>
-    <ul>
-        <?php foreach($pessoas as $pessoa): ?>
-            <li>
-                Nome: <?php echo $pessoa->nome(); ?><br>
-                Email: <?php echo $pessoa->email(); ?><br>
-                <!-- Adicione mais campos conforme necessário -->
-            </li>
-        <?php endforeach; ?>
-    </ul>
-    </div>
-   
-    <div class="msg_inclusao">
-    <?php if(isset($_SESSION['mensagem'])): ?>
-        <div>
-            <?php echo $_SESSION['mensagem']; ?>
-        </div>
-        <?php unset($_SESSION['mensagem']);  ?>
-    <?php endif; ?>
-    </div>
-   
+    <table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Status</th>
+        </tr>
+    </thead>
+            <tbody>
+            <?php if (isset($_POST['buscar_por_nome'])) {
+                $nome = obterPesquisaDados();
+                $pessoas = buscarPorNome($pdo, $nome);
+              
+                #if ($nome == null){
+                #echo "<script>alert('" . htmlspecialchars('Informe um nome válido!') . "');</script>";}
+        
+            } elseif (isset($_POST['buscar_todos'])) {
+                $pessoas = buscarTodos($pdo);
+            } 
+?>
+            <?php foreach($pessoas as $pessoa): ?>
+                <tr>
+                    <td><?php echo  $pessoa->nome() ?></td>
+                    <td><?php echo  $pessoa->email() ?></td>
+                    <td><?php echo  $pessoa->cpf() ?></td>
+                    <td><?php echo  $pessoa->status() ?></td>
+            </tr>
+                    
+            <?php endforeach; ?>
+            </tbody>
+    </table>
 
-
-   
+    </div>
+      
    </main>
 
 

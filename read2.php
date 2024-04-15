@@ -9,17 +9,19 @@ use Coutinho\Pessoa;
 #obtendo dados do formulário
 $nome = obterPesquisaDados();
 function buscarPorNome($pdo, $nome) {
-    $query = "SELECT * FROM Pessoa WHERE nome = :nome";
+    $query = "SELECT * FROM Pessoa WHERE nome LIKE :nome";
     $statement = $pdo->prepare($query);
-    $statement->bindValue(':nome', $nome);
+    $statement->bindValue(':nome', '%'.$nome.'%');
     $statement->execute();
-    $resultado = $statement->fetch();
+    $resultados = $statement->fetchall();
 
-    if ($resultado) {
-        return new Pessoa($resultado['nome'], $resultado['email'], $resultado['senha'],$resultado['cpf'], $resultado['status']);
-    } else {
-        return null;
+    $pessoas = [];
+    foreach ($resultados as $resultado) {
+        $pessoa = new Pessoa($resultado['nome'], $resultado['email'], $resultado['senha'],$resultado['cpf'], $resultado['status']);
+        $pessoas[] = $pessoa;
     }
+
+    return $pessoas;
 }
 
 //$pessoa = buscarPorNome($pdo,$nome);
@@ -38,9 +40,8 @@ function buscarTodos($pdo) {
     }
 
     return $pessoas;
+
 }
 
-//$pessoas = buscarTodos($pdo);
-//foreach($pessoas as $pessoa){
-    //echo $pessoa->nome(). "<br>";
-//}
+
+

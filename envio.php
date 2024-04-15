@@ -17,7 +17,7 @@ function obterDados() {
 
 
 function obterPesquisaDados(){
-    if (isset($_POST["pesquisar"])){
+    if (isset($_POST["buscar_por_nome"])){
         $nome = $_POST['nome'];
     
         return $nome;
