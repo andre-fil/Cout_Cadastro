@@ -78,7 +78,7 @@ $pessoas =  [];
                 $pessoas = buscarPorNome($pdo, $nome);
               
                 #if ($nome == null){
-                #echo "<script>alert('" . htmlspecialchars('Informe um nome válido!') . "');</script>";}
+                    #echo "<script>alert('" . htmlspecialchars('Informe um nome válido!') . "');</script>";}
         
             } elseif (isset($_POST['buscar_todos'])) {
                 $pessoas = buscarTodos($pdo);

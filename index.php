@@ -46,9 +46,9 @@
     </div>
   </div>
   <div class="row mb-3">
-    <label for="inputPassword" class="col-sm-2 col-form-label" >Password</label>
+    <label for="inputPassword" class="col-sm-2 col-form-label">Senha: </label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="senha" name="senha" required>
+      <input type="text" class="form-control" id="senha" name="senha" required  placeholder="Informe a senha GOV.br">
     </div>
   </div>
   <div class="row mb-3">
