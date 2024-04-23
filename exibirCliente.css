@@ -1,0 +1,31 @@
+:root {
+    --cor-primaria: #004101;
+    --cor-secundaria: #FFBA58;
+    --cor-terciaria: #FFFCFF;
+  }
+  
+ 
+  * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  var(--cor-terciaria) !important;
+     min-height: 100vh; 
+}
+
+header{
+    background-color: var(--cor-primaria) !important;
+    margin-bottom: 3%;
+    color: #FFFCFF;
+}
+  .title_principal{
+    text-align: center;
+    
+  }
+
+  .informacoes{
+    padding-top: 5%;
+   
+  }

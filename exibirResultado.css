@@ -1,0 +1,39 @@
+:root {
+    --cor-primaria: #004101;
+    --cor-secundaria: #FFBA58;
+    --cor-terciaria: #FFFCFF;
+  }
+  
+  * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  var(--cor-terciaria) !important;
+     min-height: 100vh; 
+}
+
+.header_exibir{
+    background-color: var(--cor-secundaria) !important;
+    margin-bottom: 3%;
+}
+
+.resultado_pesquisa{
+    margin:auto;
+   text-align: center;
+    background-color: var(--cor-primaria);
+    color: #FFFCFF;
+    width: 80%;
+
+}
+
+.lista_resultados{
+    display: flex;
+    justify-content:center;
+   
+}
+
+.lista_resultados p{
+    flex-direction: column;
+}

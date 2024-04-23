@@ -11,6 +11,7 @@ class Pessoa
 
     private string $status;
 
+  
     public function __construct(string $nome, string $email,string $senha, string $cpf, string $status)
     {
 

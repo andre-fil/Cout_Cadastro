@@ -45,3 +45,15 @@ function buscarTodos($pdo) {
 
 
 
+function buscarPorCPF($pdo, $cpf) {
+    $query = "SELECT * FROM Pessoa WHERE cpf = :cpf";
+    $statement = $pdo->prepare($query);
+    $statement->bindValue(':cpf', $cpf);
+    $statement->execute();
+    $resultado = $statement->fetch();
+    $pessoa = new Pessoa($resultado['nome'], $resultado['email'], $resultado['senha'],$resultado['cpf'], $resultado['status']);
+    return $pessoa;
+    }
+
+
+
