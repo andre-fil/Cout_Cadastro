@@ -52,21 +52,74 @@ use Coutinho\Pessoa;
 
     <section class="secao_aluno">
     <h1 class="title_principal" >Informações do Cliente</h1>
-    <div class="container text-center informacoes">
+    <!--<div class="container text-center informacoes">
     <div class="row align-items-start">
     <div class="col">
-      Nome : <?php echo $pessoa->nome(); ?>
+      Nome : <?php #echo $pessoa->nome(); ?>
     </div>
     <div class="col">
-    CPF : <?php echo $pessoa->cpf(); ?>
+    CPF : <?php #echo $pessoa->cpf(); ?>
     </div>
     <div class="col">
-    Email : <?php echo $pessoa->email(); ?>
+    Email : <?php #echo $pessoa->email(); ?>
     </div>
   </div>
-</div>
-
+</div> -->
 </section>
+
+<div class="container text-center ">
+  <div class="row justify-content-start secoes">
+        <div class="col-4 secao_informacoes">
+         <h4 class="title_secao_informacao">Seção de informações</h4>
+         <div class="secao_informacoes_texts">
+            <div class="texts_info_rotulo">
+              NOME :
+            </div>
+            <div class="texts_info_values"><?php echo $pessoa->nome();?>
+          </div>
+         </div>
+         <div class="secao_informacoes_texts">
+            <div class="texts_info_rotulo">
+              EMAIL:
+            </div>
+            <div class="texts_info_values"><?php echo $pessoa->email();?>
+          </div>
+         </div>
+         <div class="secao_informacoes_texts">
+            <div class="texts_info_rotulo">
+              CPF :
+            </div>
+            <div class="texts_info_values"><?php echo $pessoa->cpf();?>
+          </div>
+         </div>
+         <div class="secao_informacoes_texts">
+            <div class="texts_info_rotulo">
+              SENHA (GOV) :
+            </div>
+            <div class="texts_info_values"><?php echo $pessoa->senha();?>
+          </div>
+         </div>
+         <div class="secao_informacoes_texts">
+            <div class="texts_info_rotulo">
+              STATUS :
+            </div>
+            <div
+             class="texts_info_values"><?php echo $pessoa->status();?>
+          </div>
+         </div>
+        </div>
+       
+     
+     
+    
+    
+    <div class="col-4 secao_processos">
+    <h4 class="title_secao_processos">Seção de processos</h4>
+    </div>
+  </div>
+  
+ 
+  
    
       
    </main>

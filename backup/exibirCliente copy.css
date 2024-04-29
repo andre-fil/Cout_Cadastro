@@ -22,7 +22,6 @@ header{
 }
   .title_principal{
     text-align: center;
-    margin-bottom: 5%;
     
   }
 
@@ -30,50 +29,40 @@ header{
     padding-top: 5%;
    
   }
-  .secoes{
-    display: flex;
-    gap: 10% !important;
-  }
 
   .secao_informacoes{
     width: 40% !important;
-    background-color: #00410160;
-    border-top: 8px solid var(--cor-primaria);
-    border-radius: 10%;
-    box-shadow: 2px 2px 8px 0px #004101;
-
+  
+   border-top: 5px solid var(--cor-secundaria);
 
 
    
   }
 
-
+  .title_secao_informacao{
+    
+  }
 
   .secao_informacoes_texts{
     display: flex;
-    padding: 3%;
-    border-top:1px solid  #FFFCFF;
   
 
   }
 
   .texts_info_rotulo{
-   
+    border: 2px solid #e3e3e3;
     padding:1% 5%;
     font-family: 'Times New Roman', Times, serif;
-   
-    color:black;
-    width: 40%;
-
+   background-color:#004101;
+    color: rgb(255, 255, 255);
+    width: 29%;
   }
 
   .texts_info_values{
-
+    border: 2px solid #e3e3e3;
     padding:1% 5%;
     font-family: 'Times New Roman', Times, serif;
-  
-    color: rgb(1, 1, 1);
-    width: 50%;
+    background-color:#004101;
+    color: rgb(255, 255, 255);
+    width: 40%;
   }
-
-
