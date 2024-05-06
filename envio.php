@@ -23,4 +23,6 @@ function obterPesquisaDados(){
         return $nome;
 }
 }
+
+
 ?>

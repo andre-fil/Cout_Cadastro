@@ -32,12 +32,13 @@ header{
   }
   .secoes{
     display: flex;
-    gap: 10% !important;
+    gap: 20% !important;
+    width: 100%;
   }
 
   .secao_informacoes{
     width: 40% !important;
-    background-color: #00410160;
+   
     border-top: 8px solid var(--cor-primaria);
     border-radius: 10%;
     box-shadow: 2px 2px 8px 0px #004101;
@@ -52,7 +53,7 @@ header{
   .secao_informacoes_texts{
     display: flex;
     padding: 3%;
-    border-top:1px solid  #FFFCFF;
+    border-top:1px solid var(--cor-primaria);
   
 
   }
@@ -75,5 +76,48 @@ header{
     color: rgb(1, 1, 1);
     width: 50%;
   }
+
+.secao_processos{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+
+  
+  
+  
+}
+
+.celulas_scroll{
+  
+  height: 200%;
+  max-height: 200%;
+  padding: 2%;
+  border: 4px solid var(--cor-secundaria);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap:2%
+}
+
+.exibir_processos{
+  border: 1px solid #004101;
+  
+  align-content: center;
+
+
+}
+
+
+
+
+.btns {
+  display: flex;
+  align-items: flex-start; /* Alinha os itens ao início */
+  gap: 48%;
+  padding-top: 1%;
+  padding-left: 15%;
+}
+
 
 

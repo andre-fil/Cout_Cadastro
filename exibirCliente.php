@@ -4,6 +4,8 @@ namespace Coutinho;
 require_once 'conexao.php';
 require_once 'Pessoa.php'; 
 require_once 'read2.php'; 
+require_once 'pesquisaProcessos.php';
+require_once 'Processo.php';
 
 
 use Coutinho\Pessoa;
@@ -48,6 +50,7 @@ use Coutinho\Pessoa;
     // Recuperar o CPF da URL
     $cpf_pessoa = $_GET['cpf'];
     $pessoa = buscarPorCPF($pdo,$cpf_pessoa);
+    $processos = buscarProcessos($pdo,$cpf_pessoa);
 }?>
 
     <section class="secao_aluno">
@@ -109,22 +112,50 @@ use Coutinho\Pessoa;
          </div>
         </div>
        
-     
-     
-    
-    
     <div class="col-4 secao_processos">
     <h4 class="title_secao_processos">Seção de processos</h4>
+    <div class="celulas_scroll">
+      <?php if(!empty(is_array($processos) && $processos)){
+            foreach($processos as $processo): ?>
+            <div class="exibir_processos">
+              <div class="container text-center">
+              <div class="row justify-content-center">
+                <div class="col-4">
+                  Protocolo: <?php echo $processo->protocolo(); ?>
+                </div>
+                <div class="col-4">
+                Parceiro: <?php echo $processo->parceiro(); ?>
+                </div>
+                <div class="col-4">
+                <?php $dataAberturaFormatada = date('d/m/Y', strtotime($processo->dataAbertura()));?>
+                Data: <?php  echo $dataAberturaFormatada; ?>
+                </div>
+              </div>
+            </div>
+            </div>
+      
+              <?php endforeach;}
+            else{
+              echo "Não há processos!";
+            }?>
+                  
+                  </div>        
+                  
+                  
     </div>
   </div>
   
  
   
-   
       
    </main>
 
-
+<div class="btns">
+  
+     <button class="btn btn-primary cria_processo" type="submit" onclick="window.location='criaProcessos.php?cpf=<?php echo $pessoa->cpf(); ?>';">Atualizar informações</button>
+    <button class="btn btn-primary cria_processo" type="submit" onclick="window.location='criaProcessos.php?cpf=<?php echo $pessoa->cpf(); ?>';">Criar novo processo</button>
+</div>
+ 
 
     <footer></footer>
 </body>

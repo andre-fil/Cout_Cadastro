@@ -13,4 +13,7 @@ $pdo = new PDO('sqlite:'. $databasePath);
 
 #$pdo->exec('UPDATE Pessoa SET cpf = "06673978333" WHERE email = "filipebarreto34@gmail.com"');
 
-$pdo->exec('CREATE TABLE Processo (id INTEGER PRIMARY KEY, cpf TEXT , descricao TEXT, parceiro TEXT, protocolo text,FOREIGN KEY (cpf) REFERENCES Pessoa(cpf))');
+#$pdo->exec('CREATE TABLE Processo (id INTEGER PRIMARY KEY, cpf TEXT , descricao TEXT, parceiro TEXT, protocolo text,FOREIGN KEY (cpf) REFERENCES Pessoa(cpf))');
+
+#$pdo->exec('DROP TABLE Processo');
+#$pdo->exec('CREATE TABLE Processo (id INTEGER PRIMARY KEY, cpf TEXT , descricao TEXT, parceiro TEXT, protocolo text,dataAbertura TEXT,FOREIGN KEY (cpf) REFERENCES Pessoa(cpf))');
