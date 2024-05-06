@@ -68,47 +68,49 @@ use Coutinho\Pessoa;
     </div>
   </div>
 </div> -->
-</section>
+
 
 <div class="container text-center ">
   <div class="row justify-content-start secoes">
         <div class="col-4 secao_informacoes">
-         <h4 class="title_secao_informacao">Seção de informações</h4>
-         <div class="secao_informacoes_texts">
-            <div class="texts_info_rotulo">
-              NOME :
+        <h4 class="title_secao_informacao">Seção de informações</h4>
+         <div class="celulas_info_clientes">
+           <div class="secao_informacoes_texts">
+              <div class="texts_info_rotulo">
+                NOME :
+              </div>
+              <div class="texts_info_values"><?php echo $pessoa->nome();?>
             </div>
-            <div class="texts_info_values"><?php echo $pessoa->nome();?>
-          </div>
+           </div>
+           <div class="secao_informacoes_texts">
+              <div class="texts_info_rotulo">
+                EMAIL:
+              </div>
+              <div class="texts_info_values"><?php echo $pessoa->email();?>
+            </div>
+           </div>
+           <div class="secao_informacoes_texts">
+              <div class="texts_info_rotulo">
+                CPF :
+              </div>
+              <div class="texts_info_values"><?php echo $pessoa->cpf();?>
+            </div>
+           </div>
+           <div class="secao_informacoes_texts">
+              <div class="texts_info_rotulo">
+                SENHA (GOV) :
+              </div>
+              <div class="texts_info_values"><?php echo $pessoa->senha();?>
+            </div>
+           </div>
+           <div class="secao_informacoes_texts">
+              <div class="texts_info_rotulo">
+                STATUS :
+              </div>
+              <div
+               class="texts_info_values"><?php echo $pessoa->status();?>
+            </div>
          </div>
-         <div class="secao_informacoes_texts">
-            <div class="texts_info_rotulo">
-              EMAIL:
-            </div>
-            <div class="texts_info_values"><?php echo $pessoa->email();?>
-          </div>
-         </div>
-         <div class="secao_informacoes_texts">
-            <div class="texts_info_rotulo">
-              CPF :
-            </div>
-            <div class="texts_info_values"><?php echo $pessoa->cpf();?>
-          </div>
-         </div>
-         <div class="secao_informacoes_texts">
-            <div class="texts_info_rotulo">
-              SENHA (GOV) :
-            </div>
-            <div class="texts_info_values"><?php echo $pessoa->senha();?>
-          </div>
-         </div>
-         <div class="secao_informacoes_texts">
-            <div class="texts_info_rotulo">
-              STATUS :
-            </div>
-            <div
-             class="texts_info_values"><?php echo $pessoa->status();?>
-          </div>
          </div>
         </div>
        
@@ -149,6 +151,8 @@ use Coutinho\Pessoa;
   
       
    </main>
+
+   </section>
 
 <div class="btns">
   

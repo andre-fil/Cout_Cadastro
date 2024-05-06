@@ -32,20 +32,26 @@ header{
   }
   .secoes{
     display: flex;
-    gap: 20% !important;
-    width: 100%;
+    gap: 15% !important;
+ 
+   
+
   }
 
   .secao_informacoes{
-    width: 40% !important;
+    width: 40% !important;  
+    max-height: 200%;
+    display: flex;
+    flex-direction: column;
    
-    border-top: 8px solid var(--cor-primaria);
+    
+  }
+
+  .celulas_info_clientes{
+
+  
     border-radius: 10%;
-    box-shadow: 2px 2px 8px 0px #004101;
-
-
-
-   
+    box-shadow: 2px 2px 8px 0px #004101; 
   }
 
 
@@ -53,7 +59,8 @@ header{
   .secao_informacoes_texts{
     display: flex;
     padding: 3%;
-    border-top:1px solid var(--cor-primaria);
+    border-top :1px solid var(--cor-primaria);
+    border-radius: 10%;
   
 
   }
@@ -81,9 +88,7 @@ header{
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 5%;
-
-  
+  width: 40% !important;
   
   
 }
@@ -92,17 +97,22 @@ header{
   
   height: 200%;
   max-height: 200%;
-  padding: 2%;
-  border: 4px solid var(--cor-secundaria);
+  min-width: 100%;
+  padding: 5%;
+  border: 1px solid var(--cor-secundaria);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap:2%
+  gap:2%;
+  border-radius: 10%;
+  box-shadow: 2px 2px 8px 0px var(--cor-secundaria); 
 }
 
 .exibir_processos{
-  border: 1px solid #004101;
-  
+  background-color: #ffb9585d;
+  border-radius: 10%;
+  min-height: 20%;
+  max-height: 20%;
   align-content: center;
 
 
