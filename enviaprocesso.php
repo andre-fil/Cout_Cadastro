@@ -1,5 +1,5 @@
 <?php
-
+namespace COutinho;
 
 function dadosProcesso() {
     if (isset($_POST["enviar_processo"])){

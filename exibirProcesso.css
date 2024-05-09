@@ -1,0 +1,43 @@
+:root {
+    --cor-primaria: #004101;
+    --cor-secundaria: #FFBA58;
+    --cor-terciaria: #FFFCFF;
+  }
+  
+ 
+  * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(182, 182, 182, 0.333)!important;
+     min-height: 100vh; 
+}
+
+header{
+    background-color: var(--cor-primaria) !important;
+    margin-bottom: 3%;
+    color: #FFFCFF;
+}
+
+.informacoes_topo{
+    width: 100% !important;
+  
+    border-bottom: 2px solid #004101 !important;
+}
+
+.secao_main{
+    margin-top: 5%;
+    min-height: 18em !important;
+    
+    align-content: center;
+}
+
+.descricao{
+    border: 1px solid black !important;
+    min-height: 80%;
+    padding: 3%;
+    background-color: #FFFCFF;
+   
+}

@@ -35,5 +35,17 @@ function buscarProcessos($pdo,$cpf) {
    
 }
 
+function buscarProcessoProtocolo($pdo,$protocolo) {
+        $query = "SELECT * FROM Processo WHERE protocolo = :protocolo";
+        $statement = $pdo->prepare($query);
+        $statement->bindValue(':protocolo',$protocolo);
+        $statement->execute();
+        $resultado = $statement->fetch();
+    
+        $processo = new Processo($resultado['cpf'],$resultado['protocolo'],$resultado['parceiro'],$resultado['descricao'],$resultado['dataAbertura']);
+    
+        return $processo;
+    }
+
 //$pessoa = buscarPorNome($pdo,$nome);
 //echo "Nome: " .$pessoa->nome() . "  CPF:" . $pessoa->cpf();

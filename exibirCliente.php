@@ -31,17 +31,41 @@ use Coutinho\Pessoa;
     <div class="container text-center">
   <div class="row align-items-center">
     <div class="col">
-      One of three columns
+      Advocacia e consultoria jurídica
     </div>
     <div class="col">
-  Coutinho
-
+      Marcos Coutinho
     </div>
     <div class="col">
       One of three columns
     </div>
   </div>
 </div>
+
+<nav class="navbar " data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     </header>
    <main>
   
@@ -68,6 +92,7 @@ use Coutinho\Pessoa;
     </div>
   </div>
 </div> -->
+
 
 
 <div class="container text-center ">
@@ -119,10 +144,10 @@ use Coutinho\Pessoa;
     <div class="celulas_scroll">
       <?php if(!empty(is_array($processos) && $processos)){
             foreach($processos as $processo): ?>
-            <div class="exibir_processos">
+            <div class="exibir_processos" onclick="window.location='exibirProcesso.php?protocolo=<?php echo $processo->protocolo();?>'" style="cursor:pointer;">
               <div class="container text-center">
               <div class="row justify-content-center">
-                <div class="col-4">
+                <div class="col-4" >
                   Protocolo: <?php echo $processo->protocolo(); ?>
                 </div>
                 <div class="col-4">
@@ -156,7 +181,7 @@ use Coutinho\Pessoa;
 
 <div class="btns">
   
-     <button class="btn btn-primary cria_processo" type="submit" onclick="window.location='criaProcessos.php?cpf=<?php echo $pessoa->cpf(); ?>';">Atualizar informações</button>
+     <button class="btn btn-primary cria_processo" type="submit" onclick="window.location='atualizaCliente.php?cpf=<?php echo $pessoa->cpf(); ?>';">Atualizar informações</button>
     <button class="btn btn-primary cria_processo" type="submit" onclick="window.location='criaProcessos.php?cpf=<?php echo $pessoa->cpf(); ?>';">Criar novo processo</button>
 </div>
  

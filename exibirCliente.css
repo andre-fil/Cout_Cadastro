@@ -40,7 +40,7 @@ header{
 
   .secao_informacoes{
     width: 40% !important;  
-    max-height: 200%;
+   
     display: flex;
     flex-direction: column;
    
@@ -48,8 +48,7 @@ header{
   }
 
   .celulas_info_clientes{
-
-  
+    height: 200% !important;
     border-radius: 10%;
     box-shadow: 2px 2px 8px 0px #004101; 
   }
@@ -59,7 +58,7 @@ header{
   .secao_informacoes_texts{
     display: flex;
     padding: 3%;
-    border-top :1px solid var(--cor-primaria);
+    border-bottom :1px solid var(--cor-primaria);
     border-radius: 10%;
   
 
@@ -96,7 +95,7 @@ header{
 .celulas_scroll{
   
   height: 200%;
-  max-height: 200%;
+
   min-width: 100%;
   padding: 5%;
   border: 1px solid var(--cor-secundaria);
@@ -108,6 +107,8 @@ header{
   box-shadow: 2px 2px 8px 0px var(--cor-secundaria); 
 }
 
+
+
 .exibir_processos{
   background-color: #ffb9585d;
   border-radius: 10%;
@@ -118,6 +119,9 @@ header{
 
 }
 
+.exibir_processos:hover{
+  background-color: #FFBA58;
+}
 
 
 
