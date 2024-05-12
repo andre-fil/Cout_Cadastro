@@ -1,5 +1,5 @@
 <?php
-namespace COutinho;
+namespace Coutinho;
 
 function dadosProcesso() {
     if (isset($_POST["enviar_processo"])){
@@ -7,9 +7,10 @@ function dadosProcesso() {
     $cpf = $_POST['cpf'];
     $protocolo = $_POST['protocolo'];
     $parceiro = $_POST['parceiro'];
-    $descricao= $_POST['descricao'];
+    $assunto= $_POST['assunto'];
     $dataAbertura = $_POST['dataAbertura'];
+    $status = $_POST['status'];
 
-    return array($cpf,$protocolo,$parceiro,$descricao,$dataAbertura);
+    return array($cpf,$protocolo,$parceiro,$assunto,$dataAbertura,$status);
     }
 }

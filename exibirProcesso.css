@@ -41,3 +41,8 @@ header{
     background-color: #FFFCFF;
    
 }
+
+.resumo_processo{
+    display: flex;
+    flex-direction: column;
+}

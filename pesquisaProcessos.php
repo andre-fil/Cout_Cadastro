@@ -23,7 +23,7 @@ function buscarProcessos($pdo,$cpf) {
     
         $processos = [];
         foreach ($resultados as $resultado) {
-            $processos[]= new Processo($resultado['cpf'],$resultado['protocolo'],$resultado['parceiro'],$resultado['descricao'],$resultado['dataAbertura']);
+            $processos[]= new Processo($resultado['cpf'],$resultado['protocolo'],$resultado['parceiro'],$resultado['assunto'],$resultado['dataAbertura'],$resultado['status']);
         }
     
         return $processos;
@@ -41,8 +41,9 @@ function buscarProcessoProtocolo($pdo,$protocolo) {
         $statement->bindValue(':protocolo',$protocolo);
         $statement->execute();
         $resultado = $statement->fetch();
+     
     
-        $processo = new Processo($resultado['cpf'],$resultado['protocolo'],$resultado['parceiro'],$resultado['descricao'],$resultado['dataAbertura']);
+        $processo = new Processo($resultado['cpf'],$resultado['protocolo'],$resultado['parceiro'],$resultado['assunto'],$resultado['dataAbertura'],$resultado['status']);
     
         return $processo;
     }

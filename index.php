@@ -57,37 +57,38 @@
       <input type="text" class="form-control" id="cpf" name="cpf" required>
     </div>
   <fieldset class="row mb-3 radios">
-    <legend class="col-form-label col-sm-2 pt-0">Status:</legend>
+    <legend class="col-form-label col-sm-2 pt-0">Categoria:</legend>
     <div class="col-sm-10">
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="status" id="status1" value="status1" checked>
-        <label class="form-check-label" for="status1">
-          Status 1
+        <input class="form-check-input" type="radio" name="categoria" id="categoria1" value="categoria1" checked>
+        <label class="form-check-label" for="categoria1">
+          categoria 1
         </label>
       </div>
       <div class="col-sm-10">
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="status" id="status2" value="status2">
-        <label class="form-check-label" for="status2">
-          Status 2
+        <input class="form-check-input" type="radio" name="categoria" id="categoria2" value="categoria2">
+        <label class="form-check-label" for="categoria2">
+          categoria 2
         </label>
       </div>
       <div class="col-sm-10">
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="status" id="status3" value="status3">
-        <label class="form-check-label" for="status3">
-          Status 3
+        <input class="form-check-input" type="radio" name="categoria" id="categoria3" value="categoria3">
+        <label class="form-check-label" for="categoria3">
+          categoria 3
         </label>
       </div>
       <div class="col-sm-10">
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="status" id="status4" value="status4">
-        <label class="form-check-label" for="status4">
-          Status 4
+        <input class="form-check-input" type="radio" name="categoria" id="categoria4" value="categoria4">
+        <label class="form-check-label" for="categoria4">
+          categoria 4
         </label>
       </div>
     </div>
   </fieldset>
+  
   
   <button type="submit"  name="acao" value="Enviar" class="btn btn-primary">Cadastrar cliente</button>
 </form>

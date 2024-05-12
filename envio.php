@@ -8,9 +8,9 @@ function obterDados() {
     $email = $_POST['email'];
     $senha= $_POST['senha'];
     $cpf= $_POST['cpf'];
-    $status= $_POST['status'];
+    $categoria= $_POST['categoria'];
 
-    return array($nome, $email, $senha,$cpf,$status);
+    return array($nome, $email, $senha,$cpf,$categoria);
     }
 }
 
@@ -21,6 +21,15 @@ function obterPesquisaDados(){
         $nome = $_POST['nome'];
     
         return $nome;
+}
+
+
+function obterCategoria(){
+    if (isset($_POST["buscar_por_categoria"])){
+        $categoria = $_POST['categoria'];
+    
+        return $categoria;
+}
 }
 }
 

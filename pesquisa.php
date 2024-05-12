@@ -76,24 +76,32 @@ $pessoas =  [];
 </nav>
     </header>
    <main>
-  
-   <div class="form" >
+   <div class="form">
     <h3 class="title_form">Pesquisa de clientes</h3>
-   <form action="exibirResultados.php" method="post">
-  <div class="row mb-3">
-    <label for="nome" class="col-sm-2 col-form-label" >Nome: </label>
-    <div class="col-sm-10">
-      <input type="name" class="form-control" id="nome" name="nome" placeholder="Digite um nome, caso deseje consultar por um nome" >
-    </div>
-  </div>
-  
+    <form action="exibirResultados.php" method="post">
+        <div class="row mb-3">
+            <label for="nome" class="col-sm-2 col-form-label">Nome:</label>
+            <div class="col-sm-10">
+                <input type="name" class="form-control" id="nome" name="nome" placeholder="Digite um nome">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="categoria" class="col-sm-2 col-form-label">Categoria:</label>
+            <div class="col-sm-10">
+                <input type="name" class="form-control" id="categoria" name="categoria" placeholder="Digite uma categoria">
+            </div>
+        </div>
+
+
   
   <button type="submit"  name="buscar_por_nome" value="Enviar" class="btn btn-primary">Pesquisar por nome</button>
+  <button type="submit"  name="buscar_por_categoria" value="Enviar" class="btn btn-primary">Pesquisar por categoria</button>
   <button type="submit"  name="buscar_todos" value="Enviar" class="btn btn-primary">Exibir todos os clientes</button>
 
- 
+
+
 </form>
-   
+   </div>   
     
     </div>
     

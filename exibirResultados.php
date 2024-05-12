@@ -53,7 +53,7 @@ $pessoas =  [];
         <th scope="col">Nome</th>
         <th scope="col">Email</th>
         <th scope="col">CPF</th>
-        <th scope="col">Status</th>
+        <th scope="col">Categoria</th>
         </tr>
     </thead>
             <tbody>
@@ -66,7 +66,10 @@ $pessoas =  [];
         
             } elseif (isset($_POST['buscar_todos'])) {
                 $pessoas = buscarTodos($pdo);
-            } 
+            } elseif(isset($_POST['buscar_por_categoria'])){
+              $categoria = obterCategoria();
+              $pessoas = buscarPorCategoria($pdo,$categoria);
+            }
 ?>
             <?php foreach($pessoas as $pessoa): ?>
               <!-- Redirecionando o clicl para uma página específica -->
@@ -74,7 +77,7 @@ $pessoas =  [];
                 <td><?php echo $pessoa->nome(); ?></td>
                 <td><?php echo $pessoa->email(); ?></td>
                 <td><?php echo $pessoa->cpf(); ?></td>
-                <td><?php echo $pessoa->status(); ?></td>
+                <td><?php echo $pessoa->categoria(); ?></td>
             </tr>
 
             <?php endforeach; ?>

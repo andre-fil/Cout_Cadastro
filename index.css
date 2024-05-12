@@ -65,3 +65,8 @@ header{
     padding-top: 2%;
 }
 
+.input_resumo{
+    width: 100% !important;
+    height: 300px !important;
+    overflow-wrap: break-word !important;
+}

@@ -130,10 +130,10 @@ use Coutinho\Pessoa;
            </div>
            <div class="secao_informacoes_texts">
               <div class="texts_info_rotulo">
-                STATUS :
+                Categoria :
               </div>
               <div
-               class="texts_info_values"><?php echo $pessoa->status();?>
+               class="texts_info_values"><?php echo $pessoa->categoria();?>
             </div>
          </div>
          </div>

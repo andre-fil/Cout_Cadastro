@@ -17,7 +17,7 @@ function buscarPorNome($pdo, $nome) {
 
     $pessoas = [];
     foreach ($resultados as $resultado) {
-        $pessoa = new Pessoa($resultado['nome'], $resultado['email'], $resultado['senha'],$resultado['cpf'], $resultado['status']);
+        $pessoa = new Pessoa($resultado['nome'], $resultado['email'], $resultado['senha'],$resultado['cpf'], $resultado['categoria']);
         $pessoas[] = $pessoa;
     }
 
@@ -35,7 +35,7 @@ function buscarTodos($pdo) {
 
     $pessoas = [];
     foreach ($resultados as $resultado) {
-        $pessoa = new Pessoa($resultado['nome'], $resultado['email'], $resultado['senha'],$resultado['cpf'], $resultado['status']);
+        $pessoa = new Pessoa($resultado['nome'], $resultado['email'], $resultado['senha'],$resultado['cpf'], $resultado['categoria']);
         $pessoas[] = $pessoa;
     }
 
@@ -51,9 +51,27 @@ function buscarPorCPF($pdo, $cpf) {
     $statement->bindValue(':cpf', $cpf);
     $statement->execute();
     $resultado = $statement->fetch();
-    $pessoa = new Pessoa($resultado['nome'], $resultado['email'], $resultado['senha'],$resultado['cpf'], $resultado['status']);
+    $pessoa = new Pessoa($resultado['nome'], $resultado['email'], $resultado['senha'],$resultado['cpf'], $resultado['categoria']);
     return $pessoa;
     }
+
+    function buscarPorCategoria($pdo, $categoria){
+        $query = "SELECT * from Pessoa WHERE categoria = :categoria";
+        $statment = $pdo->prepare($query);
+        $statment->bindValue(':categoria', $categoria);
+        $statment->execute();
+        $resultados = $statment->fetchAll();
+
+        $pessoas = [];
+        foreach ($resultados as $resultado) {
+            $pessoa = new Pessoa($resultado['nome'], $resultado['email'], $resultado['senha'],$resultado['cpf'], $resultado['categoria']);
+            $pessoas[] = $pessoa;
+        }
+
+        return $pessoas;
+
+
+        }
 
 
 

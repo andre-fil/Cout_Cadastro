@@ -66,14 +66,24 @@ require_once 'Processo.php';
 <div class="container text-center secao_main">
   <div class="row align-items-start">
     <div class="col-lg-2">
-     Descrição do processo:
+    Movimentação do processo:
     </div>
-    <div class="col-lg-8 descricao ">
-     <p class="lead"><?php echo $processo->descricao();?></p> 
+
+    <div class="col-lg-8">
+    <p>Resumo do processo</p>
+     <div class="descricao">
+    
+       <p class="lead">
+       <?php echo empty($processo->descricao()) ? 'Informe o resumo do processo' : $processo->descricao(); ?></p>
+           </div>
+           <button class="btn btn-primary" type="submit" onclick="window.location='criaResumo.php?protocolo=<?php echo $processo->protocolo();?>';">Inserir resumo</button>
     </div>
-    <div class="col">
-      One of three columns
-    </div>
+
+    
+           <div class="col">
+           <button class="btn btn-primary" type="submit" onclick="window.location='criaLinhaTempo.php?protocolo=<?php echo $processo->protocolo();?>';">Adicionar à linha do tempo</button>
+     </div>
+
   </div>
 </div>
 

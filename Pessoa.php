@@ -9,22 +9,22 @@ class Pessoa
 
     private string $cpf;
 
-    private string $status;
+    private string $categoria;
 
   
-    public function __construct(string $nome, string $email,string $senha, string $cpf, string $status)
+    public function __construct(string $nome, string $email,string $senha, string $cpf, string $categoria)
     {
 
         $this->nome = $nome;
         $this->email = $email;
         $this->senha = $senha;
         $this->cpf = $cpf;
-        $this->status = $status;
+        $this->categoria = $categoria;
     }
 
-    public function status(): ?string
+    public function categoria(): string
     {
-        return $this->status;
+        return $this->categoria;
     }
 
     public function nome(): string

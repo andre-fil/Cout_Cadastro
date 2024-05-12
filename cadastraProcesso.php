@@ -18,9 +18,9 @@ if ($dadosProcesso !== null) {
     #transformando os dados em variáveis
 
     
-    list($cpf, $protocolo, $parceiro,$descricao,$dataAbertura) = $dadosProcesso;
+    list($cpf, $protocolo, $parceiro,$assunto,$dataAbertura,$status) = $dadosProcesso;
 
-    $processo = new Processo($cpf,$protocolo,$parceiro,$descricao,$dataAbertura);
+    $processo = new Processo($cpf,$protocolo,$parceiro,$assunto,$dataAbertura,$status);
 
    // Verificar se já existe um processo com o mesmo protocolo
     $sqlVerificar = "SELECT COUNT(*) FROM Processo WHERE protocolo = :protocolo";
@@ -34,13 +34,14 @@ if ($dadosProcesso !== null) {
         $_SESSION['mensagem'] = "Já existe um Processo com esse número de protocolo.";
     } else {
         // Não existe uma pessoa com o mesmo e-mail, então se insere o novo registro
-        $sqlInsert = "INSERT INTO Processo (cpf, protocolo, parceiro,descricao,dataAbertura) VALUES (:cpf, :protocolo, :parceiro,:descricao,:dataAbertura)";
+        $sqlInsert = "INSERT INTO Processo (cpf, protocolo, parceiro,assunto,dataAbertura,status) VALUES (:cpf, :protocolo, :parceiro,:assunto,:dataAbertura,:status)";
         $statement = $pdo->prepare($sqlInsert);
         $statement->bindValue(':cpf', $processo->cpf());
         $statement->bindValue(':protocolo', $processo->protocolo());
         $statement->bindValue(':parceiro', $processo->parceiro());
-        $statement->bindValue(':descricao', $processo->descricao());
+        $statement->bindValue(':assunto', $processo->assunto());
         $statement->bindValue(':dataAbertura', $processo->dataAbertura());
+        $statement->bindValue(':status', $processo->status());
 
 
         if ($statement->execute()) {

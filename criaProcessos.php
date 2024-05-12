@@ -68,9 +68,9 @@ if (isset($_GET['cpf'])) {
         </div>
     </div>
     <div class="row mb-3">
-        <label for="inputDescricao" class="col-sm-2 col-form-label">Descrição: </label>
+        <label for="inputAssunto" class="col-sm-2 col-form-label">Assunto: </label>
         <div class="col-sm-10">
-        <input type="text" class="form-control" id="descricao" name="descricao" required  placeholder="Informe a descrição do processo">
+        <input type="text" class="form-control" id="assunto" name="assunto" required  placeholder="Informe o assunto do processo">
         </div>
     </div>
     <div class="row mb-3">
@@ -79,6 +79,38 @@ if (isset($_GET['cpf'])) {
         <input type="date" class="form-control" id="dataAbertura" name="dataAbertura" required>
         </div>
     </div>
+    <fieldset class="row mb-3 radios">
+    <legend class="col-form-label col-sm-2 pt-0">Status:</legend>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="status" id="status1" value="status1" checked>
+        <label class="form-check-label" for="status1">
+          status 1
+        </label>
+      </div>
+      <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="status" id="status2" value="status2">
+        <label class="form-check-label" for="status2">
+          status 2
+        </label>
+      </div>
+      <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="status" id="status3" value="status3">
+        <label class="form-check-label" for="status3">
+          status 3
+        </label>
+      </div>
+      <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="status" id="status4" value="status4">
+        <label class="form-check-label" for="status4">
+          status 4
+        </label>
+      </div>
+    </div>
+  </fieldset>
     
     <button type="submit"  name="enviar_processo" value="enviar_processo" class="btn btn-primary">Cadastrar Processo</button>
     </form>
