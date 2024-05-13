@@ -48,11 +48,8 @@ class Processo
 
   
     public function descricao() : string {
-        if (empty($this->descricao)){
-            return "Informe o resumo do processo";
-        } else{
-        return $this->descricao;
-        }
+            return $this->descricao;
+        
     }
 
     public function dataAbertura() : string {

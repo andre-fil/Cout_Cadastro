@@ -7,6 +7,7 @@ require_once 'read2.php';
 require_once 'pesquisaProcessos.php'; 
 
 
+
 use Coutinho\Pessoa;
 if (isset($_GET['protocolo'])) {
     // Recuperar o CPF da URL
@@ -59,7 +60,7 @@ if (isset($_GET['protocolo'])) {
    <div class="row mb-3">
    <label for="inputResumo" class="col-sm-2 col-form-label">Resumo do processo: </label>
     <div class="col-sm-10">
-    <textarea class="form-control input_resumo" id="resumo" name="resumo"></textarea>
+    <textarea class="form-control input_resumo" id="resumo" name="resumo"><?php echo buscarDescricao($pdo, $protocolo); ?></textarea>
 
     </div>
     </div>

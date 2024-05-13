@@ -22,7 +22,7 @@ if ($dados !== null) {
     
     list($protocolo,$resumo) = $dados;
     $processo = buscarProcessoProtocolo($pdo,$protocolo);
-    echo $processo->dataAbertura();
+   
 
     $processo->setDescricao($resumo);
 
@@ -37,7 +37,7 @@ if ($dados !== null) {
 
 
         if ($statement->execute()) {
-            $_SESSION['mensagem'] = "Processo incluído!.";
+            $_SESSION['mensagem'] = "Resumo Adicionado!.";
         } else {
             $_SESSION['mensagem'] = "Não foi possível incluir o processo.";
         }

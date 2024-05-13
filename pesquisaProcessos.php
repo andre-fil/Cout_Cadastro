@@ -50,3 +50,17 @@ function buscarProcessoProtocolo($pdo,$protocolo) {
 
 //$pessoa = buscarPorNome($pdo,$nome);
 //echo "Nome: " .$pessoa->nome() . "  CPF:" . $pessoa->cpf();
+
+
+function buscarDescricao($pdo,$protocolo) {
+        $query = "SELECT descricao FROM Processo WHERE protocolo = :protocolo";
+        $statement = $pdo->prepare($query);
+        $statement->bindValue(':protocolo', $protocolo);
+        $statement->execute();
+        $resultado = $statement->fetchColumn();
+    
+        return $resultado;
+    }
+
+
+   

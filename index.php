@@ -29,6 +29,11 @@
 </div>
     </header>
    <main>
+   <div class="hstack gap-3">
+  <div class="p-2 fw-lighter">Home</div>
+  <div class="p-2 fw-lighter">Pesquisar</div>
+  <div class="p-2 fw-lighter">Processos</div>
+</div>
   
    <div class="form" >
     <h3 class="title_form">Cadastro de clientes</h3>

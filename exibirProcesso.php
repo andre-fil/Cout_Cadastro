@@ -4,6 +4,8 @@ namespace Coutinho;
 require_once 'conexao.php';
 require_once 'pesquisaProcessos.php';
 require_once 'Processo.php';
+require_once 'enviaResumo.php';
+
 
 
 
@@ -72,9 +74,9 @@ require_once 'Processo.php';
     <div class="col-lg-8">
     <p>Resumo do processo</p>
      <div class="descricao">
-    
        <p class="lead">
-       <?php echo empty($processo->descricao()) ? 'Informe o resumo do processo' : $processo->descricao(); ?></p>
+       <?php 
+       echo buscarDescricao($pdo,$protocolo); ?></p>
            </div>
            <button class="btn btn-primary" type="submit" onclick="window.location='criaResumo.php?protocolo=<?php echo $processo->protocolo();?>';">Inserir resumo</button>
     </div>
